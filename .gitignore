@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
@@ -42,6 +43,8 @@ testem.log
 .DS_Store
 Thumbs.db
 =======
+=======
+>>>>>>> eeab2c6f76422ffca1fc537dbcbd4252c8d931c4
 .DS_STORE
 
 /dist/
@@ -100,4 +103,7 @@ baseline.json
 
 # Husky
 .husky/_
+<<<<<<< HEAD
+>>>>>>> eeab2c6f76422ffca1fc537dbcbd4252c8d931c4
+=======
 >>>>>>> eeab2c6f76422ffca1fc537dbcbd4252c8d931c4
