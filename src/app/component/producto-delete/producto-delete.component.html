@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>Eliminar Producto</h2>
+    <div class="form-row" *ngIf="!showMsg">
+        <div class="alert alert-danger col-md-12" role="alert">
+           Estas seguro de querer Eliminar?
+           <br>
+           <div class="btn-group" role="group"> 
+            <button class="btn btn-outline-danger btn-sm" (click)="delete()">Guardar</button>
+<a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/producto-consulta']">Atras</a>
+           </div>
+        </div>
+
+    </div>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+
+    </div>
+    <form #productoForm="ngForm" *ngIf="producto">
+        <div class="form-row">
+    
+           <div class="col-md-4">
+            <label>Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" placeholder="Ingresar Nombre" class="form-control" #productoId [(ngModel)]="producto.Nombre" />
+           </div> 
+           <div class="col-md-4">
+            <label>Descripción:</label>
+            <input type="text" id="Descripcion" name="Descripcion" placeholder="Ingresar Descripcion" class="form-control" #productoId [(ngModel)]="producto.Descripcion" />
+
+           </div> 
+           <div class="col-md-4">
+            <label>Restriccion de Edad:</label>
+            <input type="text" id="RestriccionEdad" name="RestriccionEdad" placeholder="Ingresar Edad" class="form-control" #productoId [(ngModel)]="producto.RestriccionEdad" />
+            
+           </div>
+           <div class="col-md-4">
+            <label>Compañia:</label>
+            <input type="text" id="Compania" name="Compania" placeholder="Ingresar Compañia" class="form-control" #productoId [(ngModel)]="producto.Compania" />
+            
+           </div>
+           <div class="col-md-4">
+            <label>Precio:</label>
+            <input type="text" id="Precio" name="Precio" placeholder="Ingresar Precio" class="form-control" #productoId [(ngModel)]="producto.Precio" />
+           </div>
+
+        </div>
+<br>
+
+    </form>
+</div>

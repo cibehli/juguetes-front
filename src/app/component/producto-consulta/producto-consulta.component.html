@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Productos</h1>
+
+    <a class="btn btn-sm btn-outline-success"  [routerLink]="[ '/producto-save' ]">Agregar Nuevo</a>
+    <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Descripcion </td>
+            <td>Edad</td>
+            <td>Compañia</td>
+            <td>Precio</td>
+        </tr>
+        <tr *ngFor="let producto of productos">
+            <td>{{ producto.Id }}</td>
+            <td>{{ producto.Nombre }}</td>
+            <td>{{ producto.Descripcion }}</td>
+            <td>{{ producto.RestriccionEdad }}</td>
+            <td>{{ producto.Compania }}</td>
+            <td>{{ producto.Precio }}</td>
+            <div class="btn-group" role="group"> 
+                <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/producto-edit', producto.Id ]">Editar</a>
+                <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/producto-delete', producto.Id ]">Eliminar</a>
+            </div>
+        </tr>
+            
+            
+        
+    </table>
+</div>
